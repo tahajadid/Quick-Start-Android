@@ -1,25 +1,45 @@
 package tahadeta.example.quickstartandroid
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import tahadeta.example.quickstartandroid.net.RetrofitHelper
-import tahadeta.example.quickstartandroid.net.ServicesApi
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import tahadeta.example.quickstartandroid.databinding.ActivityMainBinding
+import tahadeta.example.quickstartandroid.model.News
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var mutableList: MutableList<News>
+    private lateinit var binding: ActivityMainBinding
+
+    companion object {
+        lateinit var navController: NavController
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main)
+
+        mutableList = mutableListOf()
+
+        /*
         val quotesApi = RetrofitHelper.getInstance().create(ServicesApi::class.java)
         // launching a new coroutine
         GlobalScope.launch {
             val result = quotesApi.getNews()
-            if (result != null)
-            // Checking the results
-                Log.d("TESTAPI", result.body().toString())
+            if (result != null) {
+                result.body()!!.results.forEach {
+                    // Create our object in a mutable array list
+                    val actualNew = News(it.idNews,it.idCountry,it.idLeague,it.title,it.description,it.publishedDate)
+                    mutableList.add(it.idNews?.toInt() ?: 0,actualNew)
+                }
+            }
         }
+
+         */
     }
 }
