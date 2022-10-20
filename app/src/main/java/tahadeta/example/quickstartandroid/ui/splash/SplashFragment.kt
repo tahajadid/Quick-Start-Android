@@ -45,8 +45,6 @@ class SplashFragment : Fragment() {
 
         animationView.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationRepeat(animation: Animator?) {
-                // Set Arab as default Lang
-                // localeDelegate.setLocale(LoginActivity.activityInstance, Locales.Arabic)
                 findNavController().navigate(R.id.homeFragment)
             }
 
