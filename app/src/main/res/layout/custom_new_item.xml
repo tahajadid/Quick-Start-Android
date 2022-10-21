@@ -49,7 +49,6 @@
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
 
-
     <TextView
         android:id="@+id/description"
         android:layout_width="0dp"
@@ -59,18 +58,31 @@
         android:textColor="@color/first_main"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="22 octonbre 2022"
+        android:textColor="#909193"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_page" />
 
 
     <ImageView
         android:id="@+id/next_page"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/next"
         android:padding="6dp"
+        android:src="@drawable/next"
         app:layout_constraintBottom_toBottomOf="@+id/description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
