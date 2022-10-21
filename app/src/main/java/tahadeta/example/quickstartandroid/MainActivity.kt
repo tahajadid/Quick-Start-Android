@@ -26,20 +26,5 @@ class MainActivity : AppCompatActivity() {
 
         mutableList = mutableListOf()
 
-        /*
-        val quotesApi = RetrofitHelper.getInstance().create(ServicesApi::class.java)
-        // launching a new coroutine
-        GlobalScope.launch {
-            val result = quotesApi.getNews()
-            if (result != null) {
-                result.body()!!.results.forEach {
-                    // Create our object in a mutable array list
-                    val actualNew = News(it.idNews,it.idCountry,it.idLeague,it.title,it.description,it.publishedDate)
-                    mutableList.add(it.idNews?.toInt() ?: 0,actualNew)
-                }
-            }
-        }
-
-         */
     }
 }
