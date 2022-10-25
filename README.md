@@ -4,7 +4,7 @@ This application created to have an idea about to link a Mobile application with
 
 So it based on backend project and to execute the Android App you should setup the Spring App firs.
 
-Get you [Spring Application](https://github.com/tahajadid/Quick-Start-Spring) then enjoy the discovery :)
+Get your [Spring Application](https://github.com/tahajadid/Quick-Start-Spring) then enjoy the discovery :)
 
 # Demo
 
