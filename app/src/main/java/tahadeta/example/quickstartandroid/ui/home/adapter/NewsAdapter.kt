@@ -73,7 +73,7 @@ class NewsAdapter(
     /**
      * Inside this method we specify the layout that each item of the RecyclerView should use
      * onCreateViewHolder has return type of RecyclerView.ViewHolder which represent each row of recyclerView.
-     * Using Inflator get the view of above defined custom_new_item and pass it to viewholder
+     * Using Inflator get the view of above def ined custom_new_item and pass it to viewholder
      * constructor and then return.
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

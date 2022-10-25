@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import tahadeta.example.quickstartandroid.R
 import tahadeta.example.quickstartandroid.databinding.FragmentDetailsBinding
 import tahadeta.example.quickstartandroid.model.News
@@ -49,5 +50,9 @@ class DetailsFragment : Fragment() {
         binding.bigDescription.setText(actualNews.description)
         binding.datePublish.setText(actualNews.publishedDate)
         IconAdapter.adaptIcon(binding.logoLeague, actualNews.idLeague.toString())
+
+        binding.back.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 }
