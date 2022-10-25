@@ -77,22 +77,26 @@ class HomeFragment : Fragment(), NewsClickListenner {
                     )
                     mutableList.add(it.idNews?.toInt() ?: 0, actualNew)
                 }
-            }
 
-            withContext(Dispatchers.Main) {
-                newsAdapter = NewsAdapter(
-                    requireContext(),
-                    mutableList as ArrayList<News>,
-                    newsClickListenner
-                )
 
-                binding.list.apply {
-                    layoutManager = GridLayoutManager(this.context, 1)
-                    adapter = newsAdapter
+                withContext(Dispatchers.Main) {
+                    newsAdapter = NewsAdapter(
+                        requireContext(),
+                        mutableList as ArrayList<News>,
+                        newsClickListenner
+                    )
+
+                    binding.list.apply {
+                        layoutManager = GridLayoutManager(this.context, 1)
+                        adapter = newsAdapter
+                    }
+
+                    binding.list.scheduleLayoutAnimation()
                 }
-
-                binding.list.scheduleLayoutAnimation()
+            }else{
+                Log.d("HomeFragment","Result is null")
             }
+
         }
     }
 
