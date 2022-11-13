@@ -9,3 +9,9 @@ Get your [Spring Application](https://github.com/tahajadid/Quick-Start-Spring) t
 # Demo
 
 ![](https://github.com/tahajadid/Quick-Start-Android/blob/master/Demo/football_news_demo.gif)
+
+#Get Started
+
+To get started, you should clone the current repository. Then Run The Backend application to get the info that should be listed.
+
+This is the [BackEnd Application](https://github.com/tahajadid/Quick-Start-Spring)
